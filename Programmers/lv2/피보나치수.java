@@ -21,3 +21,5 @@ class Solution {
 }
 
 //시간초과
+
+For문 이용
