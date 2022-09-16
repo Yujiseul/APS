@@ -1,25 +1,40 @@
+import java.util.*;
+
 class Solution {
-    public String solution(String s) {
+    public String solution(String s, int n) {
         String answer = "";
         
-        String[] arr = s.split(" ");
-        
+       char[] arr = s.toCharArray();
+       
         for(int i=0; i<arr.length; i++){
-            if(arr[i].charAt(0)<97 || arr[i].charAt(0)>122){
-                answer += arr[i];
-                answer += " ";
+            if(arr[i] == ' '){
                 continue;
             }
-            String temp = arr[i].substring(0,1).toUpperCase();
-            System.out.println("값" + temp);
-           answer += temp;
-            answer += arr[i].substring(1,arr[i].length()).toLowerCase();
-            answer += " ";
+                
+            
+            arr[i] += (char) n;
+            
+            if(arr[i]>90){
+                arr[i] = (char)(64+(arr[i])-90);
+                continue;
+            }
+           
+            
+            if(arr[i] >122){
+                arr[i] = (char)(96+(arr[i]-122));
+            }
+            
+            
         }
-        
-        answer = answer.trim();
+       
+        for(char x : arr){
+            answer += String.valueOf(x);
+        }
+        System.out.println((int)'a');
+        System.out.println((int)'z');     
+        System.out.println((int)'A');   
+        System.out.println((int)'Z');
+       
         return answer;
     }
 }
-
-// 실패, 
