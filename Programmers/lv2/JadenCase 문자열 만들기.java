@@ -11,29 +11,24 @@ class Solution {
                 continue;
             }
                 
-            
+            char origin = arr[i];
             arr[i] += (char) n;
             
-            if(arr[i]>90){
-                arr[i] = (char)(64+(arr[i])-90);
-                continue;
-            }
-           
-            
+            //소문자(97~122)
             if(arr[i] >122){
                 arr[i] = (char)(96+(arr[i]-122));
+                continue;
             }
-            
+            //대문자(65~90)
+             if(arr[i]>90 && origin<91){               
+                arr[i] = (char)(64+(arr[i]-90));
+            }
             
         }
        
         for(char x : arr){
             answer += String.valueOf(x);
         }
-        System.out.println((int)'a');
-        System.out.println((int)'z');     
-        System.out.println((int)'A');   
-        System.out.println((int)'Z');
        
         return answer;
     }
