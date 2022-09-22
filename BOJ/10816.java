@@ -1,1 +1,1 @@
-숫자카드2
+//getOrDeafult 사용
