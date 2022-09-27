@@ -1,2 +1,23 @@
-월별로 배열 만들기
-7로 나눈 나머지 요일에서 더하기
+class Solution {
+    public String solution(int a, int b) {
+        String answer = "";
+        
+        int[] day = new int[]{0,31,29,31,30,31,30,31,31,30,31,30,31};
+        
+        String[] week = new String[]{"SUN","MON","TUE","WED","THU","FRI","SAT"};
+        
+        int date = 0;
+        
+        for(int i=0; i<a; i++){
+            date += day[i];
+        }
+        
+        date += b-1;
+        
+        int plus = date%7;
+        
+        answer = week[(5+plus)%7];
+        
+        return answer;
+    }
+}
