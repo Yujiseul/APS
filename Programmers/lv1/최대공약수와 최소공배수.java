@@ -2,3 +2,9 @@
 
 
 // 반복문 이용
+class Solution {
+    public int[] solution(int n, int m) {
+        int[] answer = {};
+        return answer;
+    }
+}
