@@ -29,3 +29,12 @@ class Solution {
         return answer;
     }
 }
+
+// 최대 공약수 유클리드 호제법
+public static int gcd(int p, int q)
+   {
+    if (q == 0) return p;
+    return gcd(q, p%q);
+   }
+//최소 공배수는
+  answer[1] = (a*b)/answer[0];
