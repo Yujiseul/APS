@@ -13,7 +13,7 @@ class Solution {
             if(a == ' ') {
                 idx = 0;
             }else if(idx == 1){
-                if(a < '1' || a> '9'){
+                if(a < '0' || a> '9'){
                      a -= 32;
                 }
             }
@@ -25,4 +25,4 @@ class Solution {
     }
 }
 
-// test17 
+
