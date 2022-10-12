@@ -19,4 +19,5 @@ class Solution {
     //일반구현
     
     //함수구현
+    Integer.toBinaryString
 }
