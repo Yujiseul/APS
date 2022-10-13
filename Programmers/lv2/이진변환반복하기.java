@@ -1,23 +1,33 @@
 class Solution {
     public int[] solution(String s) {
-        int[] answer = {};
+        int[] answer = new int[2];
         
-        boolean flag = false;
+        int cnt = 0;
+        int zerocnt = 0;
         
-        String[] temp = s.split("");
+        String t = "";
         
-        while(flag == false){
-          String tmp = "";
-            for(String x : temp){
-               
+            while(!s.equals("1")){
+                
+                cnt++;
+                
+                // 0 없애기
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i) == '0'){
+                zerocnt++;
+            }else{
+                t += "1";
             }
         }
+                s = t;
+                t = "";
+                s = Integer.toString(s.length(), 2);
+                
+            }
+        
+        answer[0] = cnt;
+        answer[1] = zerocnt;
         
         return answer;
     }
-    
-    //일반구현
-    
-    //함수구현
-    Integer.toBinaryString
 }
